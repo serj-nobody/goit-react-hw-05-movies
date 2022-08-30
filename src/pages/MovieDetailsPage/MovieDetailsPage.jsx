@@ -21,7 +21,7 @@ const MovieDetailsPage = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const location = useLocation();
-  const { from } = location.state;
+  const from = location.state?.from;
 
   useEffect(() => {
     const fetchMovieDetails = async () => {
