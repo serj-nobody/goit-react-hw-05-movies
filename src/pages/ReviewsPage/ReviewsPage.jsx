@@ -30,7 +30,7 @@ const ReviewsPage = () => {
     };
 
     fetchMovieReviews();
-  }, []);
+  }, [id]);
 
   const movieReviewsList = movieReviews.map(({ id, author, content }) => (
     <li className={css.reviewItem} key={id}>

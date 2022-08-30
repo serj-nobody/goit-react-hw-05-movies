@@ -30,7 +30,7 @@ const CastPage = () => {
     };
 
     fetchMovieCredits();
-  }, []);
+  }, [id]);
 
   const movieCreditsList = movieCast.map(({ id, profile_path, name, character }) => (
     <li className={css.castItem} key={id}>
