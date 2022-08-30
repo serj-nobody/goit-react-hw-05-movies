@@ -1,6 +1,7 @@
 import TrendingMovies from "components/TrendingMovies/TrendingMovies";
-
 import css from './HomePage.module.css';
+
+
 
 const HomePage = () => {
   return (

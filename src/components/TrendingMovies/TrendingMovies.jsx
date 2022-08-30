@@ -5,6 +5,8 @@ import { getTrendingMovies } from "shared/api/api";
 
 import css from './TrendingMovies.module.css';
 
+
+
 const TrendingMovies = () => {
   const [trendingMovies, setTrendingMovies] = useState([]);
   const [loading, setLoading] = useState(false);

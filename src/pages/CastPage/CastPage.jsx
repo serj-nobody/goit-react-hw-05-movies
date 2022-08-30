@@ -7,7 +7,6 @@ import css from './CastPage.module.css';
 
 
 
-  
 const CastPage = () => {
   const [movieCast, setMovieCast] = useState([]);
   const [loading, setLoading] = useState(false);

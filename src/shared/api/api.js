@@ -14,29 +14,21 @@ export const getTrendingMovies = async () => {
       page: 1,
     }
   });
-
   return data;
 };
 
 export const getMovieDetails = async (id) => {
-  const { data } = await instance.get(`/movie/${id}`, {
-    params: {
-      // api_key: API_KEY,
-    }
-  });
-
+  const { data } = await instance.get(`/movie/${id}`);
   return data;
 };
 
 export const getMovieCast = async (id) => {
   const { data } = await instance.get(`/movie/${id}/credits`);
-
   return data;
 };
 
 export const getMovieReviews = async (id) => {
   const { data } = await instance.get(`/movie/${id}/reviews`);
-
   return data;
 };
 
@@ -47,6 +39,5 @@ export const searchMovies = async (searchQuery) => {
       page: 1,
     }
   });
-
   return data;
 };

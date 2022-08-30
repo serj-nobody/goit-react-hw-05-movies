@@ -7,7 +7,6 @@ import css from './ReviewsPage.module.css';
 
 
 
-  
 const ReviewsPage = () => {
   const [movieReviews, setMovieReviews] = useState([]);
   const [loading, setLoading] = useState(false);

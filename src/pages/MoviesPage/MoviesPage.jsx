@@ -5,6 +5,8 @@ import { searchMovies } from "shared/api/api";
 
 import css from './MoviesPage.module.css';
 
+
+
 const MoviesPage = () => {
   const [inputValue, setInputValue] = useState('');
   const [movies, setMovies] = useState([]);

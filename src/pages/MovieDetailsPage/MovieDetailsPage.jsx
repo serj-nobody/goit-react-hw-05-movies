@@ -22,6 +22,7 @@ const MovieDetailsPage = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from;
+  const goBack = () => navigate(from);
 
   useEffect(() => {
     const fetchMovieDetails = async () => {
@@ -40,8 +41,6 @@ const MovieDetailsPage = () => {
 
     fetchMovieDetails();
   }, [id]);
-
-  const goBack = () => navigate(from);
 
   const { poster_path, title, release_date, vote_average, overview, genres } = movieDetails;
   const releaseYear = release_date?.slice(0, 4);
