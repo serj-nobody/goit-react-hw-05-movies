@@ -1,7 +1,7 @@
 import { lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-import Menu from './components/Menu/Menu';
+import Menu from './Menu/Menu';
 
 import css from './App.module.css';
 
