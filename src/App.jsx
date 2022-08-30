@@ -13,8 +13,7 @@ const ReviewsPage = lazy(() => import ('pages/ReviewsPage/ReviewsPage'));
 const NotFoundPage = lazy(() => import ('pages/NotFoundPage/NotFoundPage'));
 
 
-  
-  
+
 export const App = () => {
   return (
     <div className={css.AppContainer}>
