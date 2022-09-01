@@ -32,7 +32,7 @@ const ReviewsPage = () => {
     fetchMovieReviews();
   }, [id]);
 
-  const movieReviewsList = movieReviews.map(({ id, author, content }) => (
+  const movieReviewsList = movieReviews?.map(({ id, author, content }) => (
     <li className={css.reviewItem} key={id}>
       <h2 className={css.name}>{author}</h2>
       <p>{content}</p>
@@ -41,7 +41,12 @@ const ReviewsPage = () => {
   
   return (
     <div className={css.container}>
-      <ul className={css.castList}>{movieReviewsList}</ul>
+      {movieReviewsList.length ?
+        <ul className={css.castList}>
+          {movieReviewsList}
+        </ul> :
+        <p className={css.notification}>No reviews were added yet</p>}
+      
       {loading && <p className={css.loading}>...loading</p>}
       {error && <p>Oops! Loading failed due to an error</p>}
     </div>

@@ -32,7 +32,7 @@ const CastPage = () => {
     fetchMovieCredits();
   }, [id]);
 
-  const movieCreditsList = movieCast.map(({ id, profile_path, name, character }) => (
+  const movieCreditsList = movieCast?.map(({ id, profile_path, name, character }) => (
     <li className={css.castItem} key={id}>
       <img className={css.castPhoto} src={profile_path ? `https://image.tmdb.org/t/p/w500${profile_path}` : 'https://feb.kuleuven.be/drc/LEER/visiting-scholars-1/image-not-available.jpg/image'} alt="" />
       <h2 className={css.name}>{name}</h2>
@@ -42,7 +42,12 @@ const CastPage = () => {
   
   return (
     <div className={css.container}>
-      <ul className={css.castList}>{movieCreditsList}</ul>
+      {movieCreditsList.length ?
+        <ul className={css.castList}>
+          {movieCreditsList}
+        </ul> :
+        <p className={css.notification}>No credits available for this movie</p>}
+      
       {loading && <p className={css.loading}>...loading</p>}
       {error && <p>Oops! Loading failed due to an error</p>}
     </div>
